@@ -1,6 +1,7 @@
 /* global webkitSpeechRecognition SpeechRecognition */
 
-export default class SpeechRecognizer {
+// eslint-disable-next-line no-unused-vars
+class SpeechRecognizer {
   constructor () {
     this.speechRecognition = new (webkitSpeechRecognition || SpeechRecognition)()
     this.speechRecognition.continuous = true
@@ -12,7 +13,7 @@ export default class SpeechRecognizer {
   start () {
     return new Promise((resolve, reject) => {
       if (this.status !== 'inactive') {
-        reject(new Error('cannot call SpeechRecognizer.start() when status is not inactive'))
+        reject(new Error('SpeechRecognizer already start recording'))
         return
       }
 
@@ -27,7 +28,7 @@ export default class SpeechRecognizer {
   stop () {
     return new Promise((resolve, reject) => {
       if (this.status !== 'recording') {
-        reject(new Error('cannot call SpeechRecognizer.stop() when status is not recording'))
+        reject(new Error('SpeechRecognizer already stop recording'))
         return
       }
 
