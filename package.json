@@ -1,0 +1,29 @@
+{
+  "name": "wrapper-class-snippets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progfay/wrapper-class-snippets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/progfay/wrapper-class-snippets/issues"
+  },
+  "homepage": "https://github.com/progfay/wrapper-class-snippets#readme",
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "standard": "^14.1.0"
+  }
+}
