@@ -1,4 +1,4 @@
-# sleep
+# `sleep(ms: number): Promise`
 
 ## Usage
 
