@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 const throttle = <F extends (...args: any[]) => any> (func: F, wait = 0) => {
   let timestamp = Date.now() - wait
   let cache: ReturnType<F>
@@ -11,3 +10,5 @@ const throttle = <F extends (...args: any[]) => any> (func: F, wait = 0) => {
     return cache
   }
 }
+
+export default throttle

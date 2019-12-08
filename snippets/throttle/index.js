@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 const throttle = (func, wait = 0) => {
   let timestamp = Date.now() - wait
   let cache = null
@@ -11,3 +10,5 @@ const throttle = (func, wait = 0) => {
     return cache
   }
 }
+
+module.exports = throttle
