@@ -1,7 +1,6 @@
 const SerialPort = require('serialport')
 const BAUD_RATE = 115200
 
-// eslint-disable-next-line no-unused-vars
 class Serial {
   constructor ({ VENDOR_ID, PRODUCT_ID, verbose = false, baudRate = BAUD_RATE }) {
     if (!VENDOR_ID && !PRODUCT_ID) {
@@ -86,3 +85,5 @@ class Serial {
     )
   }
 }
+
+module.exports = Serial

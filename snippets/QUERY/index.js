@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 const QUERY = {
   stringify: value => (
     Object.entries(value)
@@ -13,3 +12,5 @@ const QUERY = {
       .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
   )
 }
+
+module.exports = QUERY

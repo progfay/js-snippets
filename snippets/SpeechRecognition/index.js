@@ -1,6 +1,5 @@
 /* global webkitSpeechRecognition SpeechRecognition */
 
-// eslint-disable-next-line no-unused-vars
 class SpeechRecognizer {
   constructor () {
     this.speechRecognition = new (webkitSpeechRecognition || SpeechRecognition)()
@@ -40,3 +39,5 @@ class SpeechRecognizer {
     })
   }
 }
+
+module.exports = SpeechRecognizer

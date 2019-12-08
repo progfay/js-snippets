@@ -7,7 +7,6 @@ const decodeAudioData = (arrayBuffer) => (
   })
 )
 
-// eslint-disable-next-line no-unused-vars
 const createAudioBuffer = url => (
   new Promise((resolve, reject) => {
     fetch(url)
@@ -17,3 +16,5 @@ const createAudioBuffer = url => (
       .catch(reject)
   })
 )
+
+module.exports = createAudioBuffer
