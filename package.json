@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "type-check": "tsc -p tsconfig.json",
-    "lint": "standard snippets"
+    "lint": "standard snippets/**/*.js && eslint . --ext .ts"
   },
   "husky": {
     "hooks": {
@@ -24,6 +24,16 @@
   },
   "homepage": "https://github.com/progfay/wrapper-class-snippets#readme",
   "devDependencies": {
+    "@types/core-js": "^2.5.2",
+    "@types/node": "^12.12.14",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "husky": "^3.0.5",
     "standard": "^14.1.0",
     "typescript": "^3.7.3"
