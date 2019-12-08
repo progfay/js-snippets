@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "standard"
+    "type-check": "tsc -p tsconfig.json",
+    "lint": "standard snippets"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint & npm run type-check"
     }
   },
   "repository": {
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/progfay/wrapper-class-snippets#readme",
   "devDependencies": {
     "husky": "^3.0.5",
-    "standard": "^14.1.0"
+    "standard": "^14.1.0",
+    "typescript": "^3.7.3"
   }
 }
