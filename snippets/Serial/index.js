@@ -27,7 +27,7 @@ class Serial {
       ) || {})
       .catch(() => { throw new Error('Error on Serialport.list') })
 
-    if (!comName) throw new Error(`Cannot find port`, this.PORT_ID)
+    if (!comName) throw new Error(`Cannot find port ${this.PORT_ID}`)
 
     this.comName = comName
     this.port = new SerialPort(comName, { baudRate: this.baudRate })
