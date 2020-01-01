@@ -1,8 +1,8 @@
 const { PassThrough } = require('stream')
 
 export default class CombinedStream extends PassThrough {
-  constructor (...streams) {
-    super({ objectMode: true })
+  constructor (opt, ...streams) {
+    super({ ...opt, objectMode: true })
 
     this.stream = streams.reduce(
       (source, destination) => source.pipe(destination),
